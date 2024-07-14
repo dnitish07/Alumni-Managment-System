@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Opportunities</title>
+    <style>
+        /* Add these CSS styles to your existing styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 7px;
+}
+
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdd6aa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #76bff3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #d1efb2;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .opportunity {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .opportunity h2 {
+            margin-top: 0;
+        }
+        .opportunity p {
+            margin-bottom: 0;
+        }
+        #add-opportunity {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #add-button {
+            background-color: #76bff3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #add-form {
+            display: none;
+            border: 1px solid #000000;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alumni Opportunities</h1>
+    </header>
+    <div class="container">
+        <div id="add-opportunity">
+            <button id="add-button">Add Opportunity</button>
+        </div>
+        <!-- Your existing form (replace this with your actual form) -->
+        <form id="existing-form">
+            <!-- Your form fields here -->
+            <div class="form-group">
+                <label for="opportunity-title">Opportunity Title</label>
+                <input type="text" id="opportunity-title" placeholder="Opportunity Title" required>
+            </div>
+            <div class="form-group">
+                <label for="opportunity-description">Opportunity Description</label>
+                <textarea id="opportunity-description" placeholder="Opportunity Description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="alumni-name">Alumni Name</label>
+                <input type="text" id="alumni-name" placeholder="Alumni Name" required>
+            </div>
+            <div class="form-group">
+                <label for="post-date">Post Date</label>
+                <input type="date" id="post-date" required>
+            </div>
+           <div class="form-group">
+            <label for="applyLink">Apply Link:</label>
+            <input type="url" id="applyLink" name="applyLink" placeholder="https://example.com/apply"><br>
+           </div>
+            <input type="submit" value="Post">
+        </form>
+        
+        <div id="opportunity-list">
+            <div class="opportunity">
+                <h2>Job Opening at XYZ Company</h2>
+                <p>XYZ Company is looking for a software developer with experience in web development...</p>
+                <p>Posted by John Doe on October 5, 2023</p>
+            </div>
+            <div class="opportunity">
+                <h2>Internship Opportunity at ABC Startup</h2>
+                <p>ABC Startup is offering a summer internship program for students interested in...</p>
+                <p>Posted by Jane Smith on October 4, 2023</p>
+            </div><!-- Existing opportunities and new opportunities will be displayed here -->
+        </div>
+    </div>
+   
+    <script>
+       // JavaScript to toggle the display of the existing form
+const addButton = document.getElementById("add-button");
+const existingForm = document.getElementById("existing-form");
+const opportunityList = document.getElementById("opportunity-list");
+
+addButton.addEventListener("click", () => {
+    existingForm.style.display = "block";
+});
+
+existingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get form input values
+    const title = document.getElementById("opportunity-title").value;
+    const description = document.getElementById("opportunity-description").value;
+    const alumniName = document.getElementById("alumni-name").value;
+    const postDate = document.getElementById("post-date").value;
+    const applyLink = document.getElementById("applyLink").value; // Get the Apply Link value
+
+    // Create a new opportunity element
+    const opportunityDiv = document.createElement("div");
+    opportunityDiv.className = "opportunity";
+    opportunityDiv.innerHTML = `
+        <h2>${title}</h2>
+        <p>${description}</p>
+        <p>Apply Link: <a href="${applyLink}" target="_blank">${applyLink}</a></p> <!-- Display the Apply Link as a clickable link -->
+        <p>Posted by ${alumniName} on ${postDate}</p>
+    `;
+
+    // Append the new opportunity to the opportunity list
+    opportunityList.appendChild(opportunityDiv);
+
+    // Reset the form
+    existingForm.reset();
+
+    // Hide the form
+    existingForm.style.display = "none";
+});
+
+       
+    </script>
+</body>
+</html>
+

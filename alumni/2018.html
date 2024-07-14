@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ALUMNI</title>
+
+
+
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+        @import url(http://weloveiconfonts.com/api/?family=entypo);
+
+        /* entypo */
+        [class*="entypo-"]:before {
+            font-family: 'entypo', sans-serif;
+        }
+
+        * {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        .batch {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        .alumni {
+            display: flex;
+            justify-content: baseline;
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        .alumni img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'avenir medium', sans-serif;
+            font-size: 1.1em;
+            color: #333333;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 2em;
+            border-bottom: 2px solid #ef2c34;
+            margin-bottom: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ef2c34;
+            border-bottom: 1px solid #333333;
+            transition: all .4s ease;
+        }
+
+        a:hover {
+            color: #333333;
+            border-bottom: 1px solid #ef2c34;
+        }
+
+        nav {
+            width: 30%;
+            height: 100%;
+            position: fixed;
+            left: -30%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .donate {
+            background-color: #dadee7;
+            border-right: 2px;
+            border-color: #ef2c34;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            padding: 2em;
+            box-sizing: border-box;
+            border-bottom: 2px solid #ef2c34;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #ef2c34;
+            background: rgba(238, 238, 238, 0.5);
+        }
+
+        .toggle-nav {
+            font-size: 3em;
+            background: transparent;
+            color: #ef2c34;
+            line-height: 1em;
+            padding-left: 0.2em;
+            padding-right: 0.2em;
+            cursor: pointer;
+            position: fixed;
+            top: 0;
+            left: 0%;
+            z-index: 100;
+            background: white;
+        }
+
+        .wrapper {
+            position: relative;
+            box-shadow: 0 0 1em #333333;
+        }
+
+        .wrapper section {
+            position: relative;
+            background: white;
+        }
+
+        .wrapper section article {
+            width: 50%;
+            margin: 0 auto;
+            padding: 2em 0;
+        }
+
+        .wrapper section article p {
+            margin-bottom: 1em;
+        }
+
+        .wrapper section article p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .wrapper section:after {
+            content: "";
+            display: block;
+            position: relative;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 30em;
+            width: 100%;
+        }
+
+        .wrapper section:nth-child(1):after {
+            background-image: url("./Alumni1.jpg");
+
+        }
+
+       /* .wrapper section:nth-child(2):after {
+            background-image: url("./bdh_photos-14.jpg");
+        }*/
+
+      /*  .wrapper section:nth-child(3):after {
+            background-image: url("./bdh_photos-9.jpg");
+        }*/
+/*
+        @media only screen and (max-width: 600px) {
+            .wrapper section article {
+                width: 80%;
+            }
+
+            .wrapper section:after {
+                height: 15em;
+            }
+        }*/
+
+        .firstBar {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .linkBar {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .link {
+            width: 50px;
+            height: 50px;
+        }
+
+        .link1 {
+            width: 50px;
+            height: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            text-decoration: none;
+            display: inline;
+            margin: 40px;
+        }
+    </style>
+
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+
+</head>
+
+<body>
+<!--
+    <nav>
+       <div class="firstBar"><a href="https://brownherald.z2systems.com/np/clients/brownherald/donation.jsp?campaign=1" class="donate">Donate</a> <a href="https://eepurl.com/sDrDr"> Subscribe</a></div>
+    <a href="./index.html">Home</a>
+    <a href="http://www.browndailyherald.com">The Herald</a>
+    <a href="./programs.html">Herald Programs</a>
+    <a href="./years.html">Herald Through The Years</a>
+    <a href="./more.html">More About The Herald</a>
+    <div class="linkBar">
+      <a href="https://www.linkedin.com/groups/1963851"> <img src="./linkedin.png" class="link"> </a>
+      <a href="https://www.facebook.com/groups/4970488321/"> <img src="./logo.png" class="link1"> </a>
+      <a href="https://brownherald.z2systems.com/np/clients/brownherald/login.jsp?orgId=brownherald&" style="margin-top:20px;"> Database</a>
+    </div>
+    </nav>
+-->
+ <!--  <button class="toggle-nav entypo-menu"></button>-->
+    <div class="wrapper">
+        <section>
+            <article>
+                <h1>All Years</h1>
+                <ul>
+                    <li><a href="./2018.html">2020</a></li>
+                    <li><a href="./2017.html">2019</a></li>
+                    <li><a href="#">2018</a></li>
+                    <li><a href="#">2017</a></li>
+                    <li><a href="#">2016</a></li>
+                    <li><a href="#">2015</a></li>
+                    <li><a href="#">2014</a></li>
+                    <li><a href="#">2013</a></li>
+                    <li><a href="#">2012</a></li>
+                    <li><a href="#">2011</a></li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>2020</h1>
+                
+    <section>
+        <div class="batch">
+            <h2>Batch 2020</h2>
+            <div class="alumni">
+                <img src="ceo.jpeg" alt="Alumni 1">
+                <div>
+                    <h3>mahansh</h3>
+                    <p>18bq1a1277<br>
+                        mahansh@gmail.com<br>
+                        java developer at TCS</p>
+                </div>
+            </div>
+            <div class="alumni">
+                <img src="employeed.jpg" alt="Alumni 2">
+                <div>
+                    <h3>sonali</h3>
+                    <p>18bq1a1270<br>
+                        sonali@gmail.com<br>
+                        Full stack developer at goldman sachs</p>
+                </div>
+            </div>
+            <div class="alumni">
+                <img src="im.jpg" alt="Alumni 3">
+                <div>
+                    <h3>AFREED KHAN PATAN</h3>
+                    <p>19BQ1A1201<br>
+                        afreedkhan016@gmail.com<br>
+                        Full stack developer at goldman sachs</p>
+                </div>
+            </div>
+        </div>
+
+                <!--<h3> Commencement</h3>
+                <p>This semester, we’ve covered the departure of Annenberg Institute staff and programming, controversy
+                    surrounding the removal of the historic Urban Environment Lab, the student walkout mourning Parkland
+                    victims and the launch of a student-built satellite into space. We’ve also worked to promote
+                    multimedia at the Herald by strengthening our video and graphics teams, and added an editorial page
+                    board to the newsroom to produce editorials off the back of our news reporting. We’re so proud of
+                    everything our staff has accomplished this semester. </p>
+            </article>-->
+        </section>
+        <!---
+        <section>
+            <article>
+                <h3>End-of-year</h3>
+                <p>As 128 wraps up its term leading the Herald, we want to thank every person who has helped us put out
+                    more than a hundred papers this year — we’re endlessly grateful to all our staff, sources, and
+                    alumni, among others who have lent us a hand. We’ve delved into plans for graduate student
+                    unionization, student activism advocating for air conditioning to protect staff in the dining halls
+                    and the nuances of Rhode Island’s mid-term elections. Our reporters covered response to the Squirrel
+                    Hill shooting, spoke with John Kerry as he visited College Hill, and produced a three-part series
+                    reflecting on the 50th anniversary of the 1968 Black Student Walkout. Opinions pieces examined
+                    ideological diversity at Brown, consulting recruitment on campus, and the role of legacy in
+                    admission. It’s been an honor to cover this community, and we look forward to all the amazing things
+                    the incoming Herald leadership will produce.</p>
+            </article>
+        </section> -->  
+    </div>
+  <!---  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+    <script src="js/index.js"></script>
+
+  -->
+    <footer>
+        <p>&copy; 2023 Alumni Association</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

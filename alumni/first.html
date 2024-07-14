@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <img id="image_change" src="VVIT.png" height="100px"  width="100px">
+        <button onclick="changeImage()">Change Image</button>
+    
+        <script>
+            function changeImage() {
+                var image = document.getElementById('image_change');
+
+                if (image.src.match("VVIT.png")) {
+                    image.src = "logo.png";
+                }else if(image.src.match("logo.png")) {
+                    image.src = "im.jpg";
+                }else if(image.src.match("im.jpg")) {
+                    image.src = "VVIT.png";
+            }
+        }
+        </script>
+    </body>
+</html>
